@@ -1,0 +1,104 @@
+@use "variables" as v;
+
+.progressWrapper {
+    width: 100%;
+    height: 4px;
+    min-height: 4px;
+
+    .progress {
+        transition: all 250ms;
+        width: 65%;
+        height: 100%;
+        background-color: v.$orange ;
+    }
+}
+
+.doctab {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: auto 1fr;
+    position: relative;
+
+    .doctabDetails {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .floatingDetails {
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.sideNav {
+    height: 100%;
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    box-shadow: 4px 0 16px #00000020;
+    z-index: 10;
+
+
+
+    .homePageNavigator {
+        position: relative;
+        background-color: transparent;
+        transition: all 250ms;
+        width: 64px;
+        height: 64px;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        fill: black;
+        cursor: pointer;
+        user-select: none;
+
+        .icon {
+            transition: all 250ms;
+            fill: black;
+        }
+
+        &::after {
+            transition: all 250ms;
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 4px;
+            right: 0;
+            top: 0;
+            background-color: transparent;
+        }
+
+        &:hover {
+
+            background-color: #00000020;
+
+            .icon {
+                fill: v.$orange;
+            }
+
+            &::after {
+                background-color: v.$orange;
+            }
+        }
+    }
+
+    .selected {
+        .icon {
+            fill: v.$orange;
+        }
+
+        &::after {
+            background-color: v.$orange;
+        }
+
+    }
+}
