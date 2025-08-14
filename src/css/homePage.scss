@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+.home {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    .bottomContent {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
