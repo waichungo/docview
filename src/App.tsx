@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import DocView from './views/DocView';
 import { pdfjs } from 'react-pdf';
 
-
+import "./css/App.scss"
+import Header from './views/Header';
+import HomePage from './views/HomePage';
 function App() {
   useEffect(() => {
     pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -14,9 +16,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="doc_area">
-        <DocView file='C:\\Users\\James\\Downloads\\node-jose.pdf'/>
+      <Header></Header>
+      <div className="body">
+        <HomePage></HomePage>
       </div>
+      {/* <div className="doc_area">
+        <DocView file='C:\\Users\\James\\Downloads\\node-jose.pdf'/>
+      </div> */}
     </div>
   );
 }
