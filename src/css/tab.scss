@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+.navTab {
+    cursor: pointer;
+    max-width: 300px;
+    min-width: 120px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    background-color: transparent;
+    transition: all 250ms;
+
+    .nav-title {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .close {
+        width: 16px;
+        height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+        transition: all 250ms;
+        background-color: transparent;
+        border-radius: 50%;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+
+        &:hover {
+            fill: white;
+            background-color: orange;
+        }
+    }
+
+}
+
+.selected-tab {
+    background-color: #B4B4B4;
+}
