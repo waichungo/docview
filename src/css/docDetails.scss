@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+.docDetails {
+    padding: 16px;
+    box-shadow: 0 0 16px #00000040;
+    border-radius: 4px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    align-content: center;
+    background: white;
+    *{
+        user-select: none;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    input {
+        min-width: 24px;
+        height: 20px;
+        font-size: 12px;
+        padding: 0 4px;
+        field-sizing: content;
+    }
+
+    .pageNum {
+        font-size: 12px;
+        display: flex;
+        justify-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    &>* {
+        &:focus {
+            fill: v.$orange;
+        }
+    }
+}
