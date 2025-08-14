@@ -1,0 +1,114 @@
+@use 'variables' as v;
+
+.recents {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    position: relative;
+    padding: 32px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 32px;
+
+    h3 {
+        font-size: 32px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .recentContent {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        width: 100%;
+        justify-content: stretch;
+        gap: 32px;
+
+        .searchBox {
+            background-color: white;
+            width: 100%;
+            padding: 16px;
+            border-radius: 4px;
+            box-shadow: 0 0 16px #0000003f;
+            input{
+                outline: none;
+                width: 100%;
+                outline: none;
+                border: none;                
+            }
+        }
+
+        .recentItems {
+            display: flex;
+            overflow-y: auto;
+            gap: 16px;
+            height: 100%;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+
+            justify-content: stretch;
+            justify-items: stretch;
+        }
+
+        .recentItem {
+            background: white;
+            width: 120px;
+            min-width: 120px;
+            max-width: 120px;
+            border-radius: 4px;
+            max-height: 144px;
+            box-shadow: 0 0 16px #00000040;
+
+            .preview {
+                width: 100%;
+                height: 80px;
+                min-height: 80px;
+                background-color: #cacaca;
+                position: relative;
+
+                .icon {
+                    position: absolute;
+                    fill: #575757;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .recentItemContent {
+                padding: 8px;
+
+                p {
+                    font-size: 12px;
+                    max-lines: 2;
+                    line-height: 1.5em;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    /* Specifies the number of lines to display */
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+    .homeTabBg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+}
