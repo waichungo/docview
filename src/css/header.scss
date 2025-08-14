@@ -1,0 +1,68 @@
+@use 'variables' as v;
+
+.header {
+    display: grid;
+    z-index: 20000;
+    background-color: white;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    box-shadow: 0 0 16px #00000040;
+}
+
+
+.logo-section {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    .img-wrapper {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+    }
+}
+
+.profile-button {
+    button {
+
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        border: none;
+        background: transparent;
+
+        .profile-pic {
+            border-radius: 50%;
+            background-color: v.$lightGray;
+            padding: 4px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+    }
+}
