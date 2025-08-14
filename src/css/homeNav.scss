@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.homeNav{
+    width: 100%;
+    height: 32px;
+    background-color: #E4E4E4;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+}
