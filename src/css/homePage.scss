@@ -4,9 +4,17 @@
     display: grid;
     width: 100%;
     height: 100%;
+    align-content: stretch;
+    justify-content: stretch;
 
     .bottomContent {
+        width: 100%;
+        height: 100%;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        max-height: calc( 100vh - 54px );
+        overflow-y: hidden;
+        max-width: 100vw;
+        overflow: hidden;
     }
 }
