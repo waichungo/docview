@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import DocView from './views/DocView';
+import PDFViewer from './views/PDFView';
 import { pdfjs } from 'react-pdf';
 
 import "./css/App.scss"
@@ -11,6 +11,7 @@ function App() {
       'pdfjs-dist/build/pdf.worker.min.mjs',
       import.meta.url,
     ).toString();
+
     console.log("Added pdfjs worker")
   }, [])
 
