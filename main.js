@@ -18,11 +18,14 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
-      webSecurity: false
+      webSecurity: false,
+      contextIsolation: true,
     },
   });
-  var file = String.raw`C:\Users\James\Downloads\Documents\ Windell Oskay, Eric Schlaepfer - Open Circuits_ The Inner Beauty of Electronic Components (2022, No Starch Press) - libgen.li.pdf`
+  // var file = String.raw`C:\Users\James\Downloads\Documents\ Windell Oskay, Eric Schlaepfer - Open Circuits_ The Inner Beauty of Electronic Components (2022, No Starch Press) - libgen.li.pdf`
+  var file = String.raw`C:\Users\James\Downloads\Assembly_Language_Succinctly.epub`
   console.log(pathToFileURL(file).href)
   const startURL = isDev
     ? 'http://localhost:5579'
