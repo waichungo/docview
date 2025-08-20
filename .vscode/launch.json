@@ -2,16 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Main Process",
       "type": "node",
       "request": "launch",
+      "name": "Debug Main Process",
+      "program": "${workspaceFolder}/main/dist/main.js", // Adjust if your main file is elsewhere
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "${userHome}/AppData/Roaming/npm/electron",
-      "windows": {
-        "runtimeExecutable": "${userHome}/AppData/Roaming/npm/electron.cmd"
-      },
-      "args" : ["."],
-      "outputCapture": "std"
-    }
+      "runtimeExecutable": "electron", // Path to Electron executable
+      "args": [],
+      "outputCapture": "std",
+      "console": "integratedTerminal"
+    }    
   ]
 }
